@@ -5,6 +5,8 @@ const geocode = require('./utils/geocode');
 const forecast = require('./utils/weathercode');
 const app = express();
 
+const port = process.env.PORT || 3000;
+
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../template/views')
@@ -17,9 +19,7 @@ hbs.registerPartials(partialsPath)
 
 app.use(express.static(path.join(__dirname,'../public')));
 
-app.listen(3000,()=>{
-    console.log("server is up");
-})
+
 
 
 app.get('',(req,res)=>{
@@ -70,4 +70,7 @@ app.get('*',(req,res)=>{
     res.render('error',{
         error:"Page not found"
     });
+})
+app.listen(port,()=>{
+    console.log("server is up");
 })
