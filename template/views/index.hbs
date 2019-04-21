@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="download.png" type="image/x-icon">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1>{{title}}</h1>
+        {{>header}}
+        <h2>This website is used to get weather information</h2>
+        <form action="">
+            <input type="text" placeholder="type location">
+            <button>Search</button>
+        </form>
+        <p class="first"></p>
+        <p class="second"></p>
+    </div>
+    {{>footer}}
+
+    <script src="js/script.js"></script>
+</body>
+</html>
